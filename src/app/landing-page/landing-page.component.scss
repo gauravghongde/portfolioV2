@@ -1,0 +1,33 @@
+.parent-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.child-container {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.bg-art-filter {
+  width: 21%;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.profile-pic-bg {
+  // position: fixed;
+  // top: -17rem;
+  // right: 0;
+  // opacity: 0.8;
+
+  position: fixed;
+  right: 3rem;
+  top: 0;
+  height: 90%;
+  transform: scale(1.5);
+  opacity: 0.8;
+  z-index: -1;
+}

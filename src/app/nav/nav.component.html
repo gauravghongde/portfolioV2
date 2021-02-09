@@ -1,0 +1,26 @@
+<div class="nav-container">
+  <div class="nav-menu-container" [ngClass]="isMenuTriggered ? 'nav-anim-expanded': 'nav-anim'">
+    <div (click)="onClick()" class="nav-menu-btn cursor-btn">
+      <div class="icon-bar" [@hamburgerX]="!isMenuTriggered ? 'hamburger' : 'topX'"></div>
+      <div class="icon-bar" [@hamburgerX]="!isMenuTriggered ? 'hamburger' : 'hide'"></div>
+      <div class="icon-bar" [@hamburgerX]="!isMenuTriggered ? 'hamburger' : 'bottomX'"></div>
+    </div>
+    <div>
+      <ul class="nav-menu-items fade-text" [ngClass]="isMenuTriggered ? 'fade-in-text': 'fade-out-text'">
+        <a href="#">
+          <li>Projects</li>
+        </a>
+        <a href="#">
+          <li>Resume</li>
+        </a>
+        <a href="#">
+          <li>About</li>
+        </a>
+        <a href="#">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+</div>

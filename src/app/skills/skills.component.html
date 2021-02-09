@@ -1,0 +1,15 @@
+<div class="h-100 skills-container">
+  <h1 class="nav-header gilroy">
+    My Skills
+  </h1>
+
+  <div class="body-text cascadia">
+    <div *ngFor="let skill of skills">
+      <b>{{skill.label}}:</b>
+      <p *ngFor="let entry of skill.entries">- {{entry}}</p>
+      <br/>
+    </div>
+
+  </div>
+
+</div>
