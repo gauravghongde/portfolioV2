@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 * {
   cursor: none !important;
 }
@@ -11,12 +13,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cursor-dot {
+  backdrop-filter: blur(0);
 }
 
 .cascadia {
@@ -32,7 +43,7 @@ p {
 // }
 
 body {
-  background-color: black;
+  background-color: $primary-color;
 }
 
 .w-100 {
@@ -50,4 +61,58 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.text-primary-100 {
+  color: $accent-color;
+}
+
+// ------------ Utility Classes ------------//
+
+.scrollable-y {
+  overflow-y: scroll;
+}
+
+// ------------ Common ---------------------//
+
+.tl-mp {
+  margin: 0 0 1.5vw 3vw;
+  padding-top: 1.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .tl-mp {
+    margin: 0 0 3vw 6vw;
+  }
+}
+
+.nav-header {
+  @extend .tl-mp;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: $accent-color;
+}
+
+.body-text {
+  margin: 0 0 1.5vw 3vw;
+  font-size: 4vh;
+  color: rgb(255 255 255 / 60%);
+}
+
+@media only screen and (max-width: 600px) {
+  .body-text {
+    margin: 0 6vw 3vw 6vw;
+    font-size: 1em;
+  }
+}
+
+// ------------ pdf-viewer -----------------//
+
+.ng2-pdf-viewer-container {
+  border-radius: 2rem;
+}
+
+.page {
+  margin: 0 !important;
 }

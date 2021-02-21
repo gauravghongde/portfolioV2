@@ -1,31 +1,7 @@
-.nav-header {
-  font-weight: 800;
-  font-size: 2.8em;
-  line-height: 90%;
-  color: white;
-  margin: 0 0 1.5vw 3vw;
-  padding-top: 1.6rem;
-}
-
-.body-text {
-  margin: 0 0 1.5vw 3vw;
-  font-size: 2em;
-  color: rgba(255, 255, 255, 0.63);
-}
-
 .skills-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-header {
-    margin: 0 0 3vw 6vw;
-  }
 
-  .body-text {
-    margin: 0 6vw 3vw 6vw;
-    font-size: 1em;
-  }
-}

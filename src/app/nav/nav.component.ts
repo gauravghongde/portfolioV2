@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { hamburgerIconAnim } from '../animations';
+import { NavItem, NAV_ITEMS } from '../config';
 
 @Component({
   selector: 'app-nav',
@@ -10,6 +11,7 @@ import { hamburgerIconAnim } from '../animations';
 export class NavComponent implements OnInit {
 
   public isMenuTriggered = false;
+  public navItems: NavItem[] = NAV_ITEMS;
 
   constructor() { }
 

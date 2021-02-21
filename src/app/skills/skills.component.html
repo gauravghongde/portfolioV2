@@ -5,8 +5,8 @@
 
   <div class="body-text cascadia">
     <div *ngFor="let skill of skills">
-      <b>{{skill.label}}:</b>
-      <p *ngFor="let entry of skill.entries">- {{entry}}</p>
+      <b class="text-primary-100">/<u>{{skill.label}}</u></b>
+      <p *ngFor="let entry of skill.entries">> {{entry}}</p>
       <br/>
     </div>
 

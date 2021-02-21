@@ -1,4 +1,4 @@
-
+@import '../../colors.scss';
 
 @media only screen and (max-width: 600px) {
   .profile-pic-bg {
@@ -27,16 +27,16 @@
 
 .display-text {
   font-weight: 800;
-  font-size: 6.8em;
+  font-size: 14.5vh;
   line-height: 90%;
-  color: white;
+  color: $accent-color;
   margin: 0 0 1.5vw 3vw;
 }
 
 .secondary-text {
   margin: 0 0 1.5vw 3vw;
-  font-size: 2.5em;
-  color: rgba(255, 255, 255, 0.63);
+  font-size: 6vh;
+  color: rgb(255 255 255 / 70%)
 }
 
 .social-icon-container {
