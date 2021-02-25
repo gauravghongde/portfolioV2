@@ -49,6 +49,18 @@ export class AppComponent implements OnInit, AfterViewChecked {
       borderColor: "transparent"
     });
 
+    cursor.over("a", {
+      scale: 2.5,
+      background: "#faa2c1",
+      borderColor: "transparent"
+    });
+
+    cursor.over(".btn", {
+      scale: 2.5,
+      background: "#faa2c1",
+      borderColor: "transparent"
+    });
+
   }
 
   ngAfterViewChecked() {

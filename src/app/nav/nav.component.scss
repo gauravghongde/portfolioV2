@@ -49,7 +49,7 @@ $menu-container-m: 1.6rem;
 }
 
 .nav-anim-expanded {
-  width: 14rem;
+  width: 12rem;
   height: calc(100% - (2 * #{$menu-container-p} + 2 * #{$menu-container-m}));
   transition: height 0.5s, width 0.5s;
 }
@@ -89,9 +89,10 @@ $menu-container-m: 1.6rem;
 }
 
 .nav-menu-items {
-  font-size: 2.4rem;
+  font-size: 2em;
   font-family: "Gilroy";
   font-weight: 800;
+  margin-top: 1.5em;
 }
 
 .fade-text {

@@ -8,13 +8,33 @@
       <div class="proj-index">
         {{currentIndex+1 | number:'2.0'}}
       </div>
-      <div>
+      <div class="proj-header">
         <div class="proj-title">
-          {{currentProject.title}}
+          <span class="text-content">{{currentProject.title}}</span>
         </div>
         <div class="proj-desc">
           {{currentProject.description}}
         </div>
+      </div>
+      <div class="proj-media">
+
+      </div>
+      <div class="proj-tech">
+        <h2>Tech Stack</h2>
+        <p *ngFor="let techStackEntry of currentProject.techStack">+ {{techStackEntry}}</p>
+      </div>
+      <div class="proj-ft">
+        <h2>Features</h2>
+        <p *ngFor="let feature of currentProject.features">+ {{feature}}</p>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div>
+        <button class="btn btn-hollow">visit</button>
+        <button class="btn btn-hollow"> <img class="btn-icon" src="assets/icons/git.svg"> </button>
+      </div>
+      <div class="bottom-btn">
+        <button class="btn">next ({{(currentIndex+2)%totalProjects}}/{{totalProjects}}) →</button>
       </div>
     </div>
   </div>

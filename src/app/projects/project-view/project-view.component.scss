@@ -2,49 +2,101 @@
 
 .project-body {
   color: $accent-color;
-  margin-left: 3rem;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 .head-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .proj-index {
-  position: absolute;
-  left: -7vh;
-  top: 10vh;
+  position: relative;
   font-size: 23vh;
   font-weight: 900;
+  transform: translate(-10vh, -4vh);
+}
+
+.proj-header {
+  max-width: 81%;
+  transform: translateX(-6vh);
 }
 
 .proj-title {
-  margin-left: 18vh;
   font-size: 8vh;
   font-weight: 900;
 }
 
 .proj-desc {
-  margin-left: 18vh;
   font-size: 3vh;
-  margin-right: 14vh;
   font-weight: 300;
+}
+
+.proj-media {
+  background-color: $secondary-color;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 32rem;
+  height: 10rem;
+  margin-top: 2rem;
+}
+
+.proj-tech {
+  margin: 2rem 2rem 0 2rem;
+  h2 {
+    font-size: 4vh;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+  }
+  p {
+    font-size: 3vh;
+  }
+}
+
+.proj-ft {
+  @extend .proj-tech;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
   .proj-index {
-    left: -4vh;
+    transform: translate(-56px, 0);
     font-size: 15vh;
+    font-weight: 900;
+  }
+
+  .proj-header {
+    transform: translateX(0);
+    max-width: 100%;
   }
 
   .proj-title {
-    margin-left: 8vh;
     font-size: 4vh;
   }
 
   .proj-desc {
-    margin-left: 8vh;
     font-size: 2vh;
-    margin-right: 4vh;
+  }
+
+  .proj-tech,
+  .proj-ft {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bottom-btn {
+    width: 100%;
+    .btn {
+      width: 100%;
+    }
   }
 }
 
