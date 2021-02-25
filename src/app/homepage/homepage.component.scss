@@ -1,0 +1,71 @@
+@import '../../colors.scss';
+
+@media only screen and (max-width: 600px) {
+  .profile-pic-bg {
+    right: -30vw;
+    top: unset;
+    bottom: 30vw;
+    height: 129vw;
+  }
+}
+
+.welcome-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 70%;
+}
+
+.deco-none {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.display-text {
+  font-weight: 800;
+  font-size: 14.5vh;
+  line-height: 90%;
+  color: $accent-color;
+  margin: 0 0 1.5vw 3vw;
+}
+
+.secondary-text {
+  margin: 0 0 1.5vw 3vw;
+  font-size: 6vh;
+  color: rgb(255 255 255 / 70%)
+}
+
+.social-icon-container {
+  width: fit-content;
+  margin: 0 0 3vw 3vw;
+}
+
+.social-icon {
+  padding: 0 0.5rem 0 0;
+  height: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .display-text {
+    font-size: 3em;
+    margin: 0 0 3vw 6vw;
+  }
+
+  .secondary-text {
+    margin: 0 0 3vw 6vw;
+    font-size: 1em;
+  }
+
+  .social-icon-container {
+    margin: 0 0 6vw 6vw;
+  }
+
+}
+
+
+
+/* Utility classes */

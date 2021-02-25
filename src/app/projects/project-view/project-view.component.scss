@@ -1,0 +1,58 @@
+@import "src/colors.scss";
+
+.project-body {
+  color: $accent-color;
+  margin-left: 3rem;
+}
+
+.head-container {
+  display: flex;
+}
+
+.proj-index {
+  position: absolute;
+  left: -7vh;
+  top: 10vh;
+  font-size: 23vh;
+  font-weight: 900;
+}
+
+.proj-title {
+  margin-left: 18vh;
+  font-size: 8vh;
+  font-weight: 900;
+}
+
+.proj-desc {
+  margin-left: 18vh;
+  font-size: 3vh;
+  margin-right: 14vh;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+  .proj-index {
+    left: -4vh;
+    font-size: 15vh;
+  }
+
+  .proj-title {
+    margin-left: 8vh;
+    font-size: 4vh;
+  }
+
+  .proj-desc {
+    margin-left: 8vh;
+    font-size: 2vh;
+    margin-right: 4vh;
+  }
+}
+
+.breadcrum-link {
+  color: $secondary-color;
+}
+
+.breadcrum-link:hover {
+  color: $accent-color;
+  transition: ease 0.3s;
+}

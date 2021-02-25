@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./colors.scss";
+
+* {
+  cursor: none !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cursor-dot {
+  backdrop-filter: blur(0);
+}
+
+.cascadia {
+  font-family: "Cascadia Code" !important;
+}
+
+.gilroy {
+  font-family: "Gilroy" !important;
+}
+
+// .morganite {
+//   font-family: "Morganite" !important;
+// }
+
+body {
+  background-color: $primary-color;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.fill-wh {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-primary-100 {
+  color: $accent-color;
+}
+
+// ------------ Utility Classes ------------//
+
+.scrollable-y {
+  overflow-y: scroll;
+}
+
+// ------------ Common ---------------------//
+
+.tl-mp {
+  margin: 0 0 1.5vw 3vw;
+  padding-top: 1.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .tl-mp {
+    margin: 0 0 3vw 6vw;
+  }
+}
+
+.nav-header {
+  @extend .tl-mp;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: $accent-color;
+}
+
+.body-text {
+  margin: 0 0 1.5vw 3vw;
+  font-size: 4vh;
+  color: rgb(255 255 255 / 60%);
+}
+
+@media only screen and (max-width: 600px) {
+  .body-text {
+    margin: 0 6vw 3vw 6vw;
+    font-size: 1em;
+  }
+}
+
+// ------------ pdf-viewer -----------------//
+
+.ng2-pdf-viewer-container {
+  border-radius: 2rem;
+}
+
+.page {
+  margin: 0 !important;
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="376.669" height="470.218" viewBox="0 0 376.669 470.218">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.36;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffedcc"/>
+      <stop offset="1" stop-color="#fdebca" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_7" data-name="Group 7" class="cls-1" transform="translate(376.669 1078.935) rotate(180)">
+    <path id="Union_1" data-name="Union 1" class="cls-2" d="M281.685,470.005V375.962h94.157v39.044a55,55,0,0,1-55,55ZM0,470.005a94.1,94.1,0,0,1,94.157-94.044H0V281.918H94.157V470.005ZM94.172,281.918V187.875h94.156L94.172,281.918h94.156v94.044Zm94.242-.827V187.048l94.156,94.043ZM187.584,94.04q-.413,0-.828,0V0h94.157A94.1,94.1,0,0,1,200.8,93h80.938l-94.157,94.044ZM0,186.977,94.157,92.933v94.044Z" transform="translate(376.669 1078.723) rotate(180)"/>
+    <path id="Union_2" data-name="Union 2" class="cls-3" d="M282.513,376.174h94.156v94.044A94.1,94.1,0,0,1,282.513,376.174ZM94.171,470.218V376.174a94.1,94.1,0,0,1,94.156,94.044Zm282.5-282.13L188.355,376.174C188.355,272.3,272.666,188.087,376.669,188.087Zm0,0c0,103.877-84.311,188.087-188.314,188.087ZM0,376.174V282.13l94.157-94.043V282.13H0l94.157,94.044ZM94.17,282.06V188.016h94.086L94.171,94.044V0h94.156L94.171,94.044h94.156V282.06Z" transform="translate(376.669 1078.935) rotate(180)"/>
+  </g>
+</svg>

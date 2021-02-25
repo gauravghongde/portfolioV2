@@ -1,0 +1,40 @@
+
+@import '../../colors.scss';
+
+.display-text {
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 14.5vh;
+  line-height: 90%;
+  color: $secondary-color;
+}
+
+.menu-list-item {
+  margin-bottom: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .display-text {
+    font-size: 5.5vh;
+  }
+
+  .menu-list-item {
+    margin-bottom: 0;
+  }
+}
+
+a:hover {
+  font-weight: 800;
+  color: $accent-color;
+  transition: ease 0.3s;
+}
+
+.breadcrum-link {
+  color: $secondary-color;
+}
+
+.breadcrum-link:hover {
+  color: $accent-color;
+  transition: ease 0.3s;
+}
