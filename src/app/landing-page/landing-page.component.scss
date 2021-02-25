@@ -31,3 +31,11 @@
   opacity: 0.8;
   z-index: -1;
 }
+
+@media only screen and (max-width: 600px) {
+  .profile-pic-bg {
+    right: -11rem;
+    height: 100%;
+    transform: scale(1);
+  }
+}

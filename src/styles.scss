@@ -89,7 +89,7 @@ html {
 }
 
 .body-text {
-  margin: 0 0 1.5vw 3vw;
+  margin: 0 0 1.3rem 1.6rem;
   font-size: 4vh;
   color: rgb(255 255 255 / 60%);
 }
@@ -99,6 +99,15 @@ html {
     margin: 0 6vw 3vw 6vw;
     font-size: 1em;
   }
+}
+
+.breadcrum-link {
+  color: $secondary-color;
+}
+
+.breadcrum-link:hover {
+  color: $accent-color;
+  transition: ease 0.3s;
 }
 
 // ------------ pdf-viewer -----------------//
