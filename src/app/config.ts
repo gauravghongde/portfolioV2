@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
       "Spring Boot",
       "Angular 10",
       "MongoDB",
-      "Heroku (backend deployment) , Vercel (frontend hosting)"
+      "Deployment: Heroku (backend), Vercel (frontend)"
     ],
     link: {
       code: "https://github.com/projectFolio",
@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
       "Spring Boot",
       "Angular 8",
       "MongoDB",
-      "Heroku (backend deployment) , Vercel (frontend hosting)"
+      "Deployment: Heroku (backend), Vercel (frontend)"
     ],
     link: {
       code: "https://github.com/gauravghongde/devnet",

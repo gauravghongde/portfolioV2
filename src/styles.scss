@@ -76,14 +76,8 @@ html {
 // ------------ Common ---------------------//
 
 .tl-mp {
-  margin: 0 0 1.5vw 3vw;
+  margin: 0 0 1.3rem 1.6rem;
   padding-top: 1.6rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .tl-mp {
-    margin: 0 0 3vw 6vw;
-  }
 }
 
 .nav-header {
@@ -115,4 +109,27 @@ html {
 
 .page {
   margin: 0 !important;
+}
+
+// ------------ btn -----------------------//
+
+.btn {
+  @extend .cascadia;
+  font-size: 3vh;
+  background: $accent-color;
+  color: $primary-color;
+  border: 2px solid $accent-color;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.btn-hollow {
+  background: transparent;
+  color: $accent-color;
+}
+
+.btn-icon {
+  height: 2.8vh;
+  margin-bottom: -0.2rem;
 }

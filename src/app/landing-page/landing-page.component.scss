@@ -1,12 +1,12 @@
 .parent-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
+  height: 100%;
 }
 
 .child-container {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 100%;
 }
 
 .bg-art-filter {

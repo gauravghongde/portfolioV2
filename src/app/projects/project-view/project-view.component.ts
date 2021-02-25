@@ -11,6 +11,7 @@ export class ProjectViewComponent implements OnInit {
 
   public projectTitle: string;
   public currentIndex: number;
+  public totalProjects: number = PROJECTS.length;
   public currentProject: Project;
 
   constructor(private activatedRoute: ActivatedRoute) { }
