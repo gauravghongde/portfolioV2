@@ -1,0 +1,35 @@
+<div class="h-100">
+  <h1 class="nav-header gilroy">
+    <a class="breadcrum-link" href="/">Home /</a>
+    Contact
+  </h1>
+
+  <div class="contact-container">
+    <div class="body-text cascadia">
+      <a class="text-link" href="tel:{{mobileNumber}}">{{mobileNumber}}</a>
+    </div>
+    <div class="body-text cascadia">
+      <a class="text-link" href="mailto:{{emailId}}">{{emailId}}</a>
+    </div>
+
+    <br>
+
+    <div *ngIf="!loading && !submitted" class="card-body">
+      <form class="text-left" [formGroup]="feedbackFormGroup">
+        <div class="header-text gilroy">Feedback</div>
+        <textarea rows="10" class="textarea cascadia" formControlName="feedbackText"
+          placeholder="Write your feedback here"></textarea>
+        <input type="submit" (click)="submit()" value="submit"
+          class="btn btn-hollow pull-right">
+      </form>
+    </div>
+
+    <div *ngIf="loading && !submitted">
+    </div>
+
+    <div *ngIf="submitted" class="cascadia feedback-resp">
+      <p>Thanks for your feedback, much appreciated!</p>
+    </div>
+  </div>
+
+</div>

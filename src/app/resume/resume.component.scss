@@ -1,4 +1,12 @@
+.resume-container {
+  margin: 0 2rem 2rem 2rem;
+}
+
 pdf-viewer {
   display: flex;
-  // width: 35%;
+}
+
+.btn-array {
+  display: flex;
+  flex-wrap: wrap;
 }

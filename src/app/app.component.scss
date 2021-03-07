@@ -1,0 +1,11 @@
+.navigator {
+  transition: ease 0.3s;
+  color: var(--accent-color);
+  font-weight: bolder;
+  font-size: 2rem;
+  background: var(--primary-color);
+  position: absolute;
+  transform: translateY(106vh) rotate(90deg);
+  right: 0;
+  margin: 0;
+}

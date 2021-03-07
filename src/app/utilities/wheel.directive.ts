@@ -1,34 +1,44 @@
 
-import { Directive, ElementRef, HostListener } from '@angular/core';
-
+import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
 @Directive({
   selector: '[wheel]'
 })
 
 export class WheelDirective {
+
+  @Output() mouseWheelUp = new EventEmitter();
+  @Output() mouseWheelDown = new EventEmitter();
+  @Output() touchScroll = new EventEmitter();
+
   i: number = 1;
 
-  constructor(
-    private el: ElementRef
-  ) { }
+  constructor() { }
 
   @HostListener('mousewheel', ['$event'])
   onMousewheel(event) {
-    if (event.wheelDelta > 0) {
-      console.log(event.wheelDelta);
-      // event.srcElement.style.setProperty('transition', 'all 200ms ease-in')
-      // event.srcElement.style.setProperty('transform', "scale(" + this.i + 1 + ")")
-    }
-    if (event.wheelDelta < 0) {
-      console.log(event.wheelDelta);
-      // event.srcElement.style.setProperty('transition', 'all 200ms ease-out')
-      // event.srcElement.style.setProperty('transform', +"scale(" + this.i - 1 + ")")
-    }
+    this.mouseWheelFunc(event);
   }
 
   @HostListener('touchmove', ['$event'])
   onTouchMove(event) {
-    console.log(event.touches[0].clientY);
+    // console.log(event.touches[0].clientY);
+    this.touchScroll.emit(event);
+  }
+
+  private mouseWheelFunc(event: any) {
+    var event = window.event || event; // old IE support
+    var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    if (delta > 0) {
+      this.mouseWheelUp.emit(event);
+    } else if (delta < 0) {
+      this.mouseWheelDown.emit(event);
+    }
+    // for IE
+    event.returnValue = false;
+    // for Chrome and Firefox
+    if (event.preventDefault) {
+      event.preventDefault();
+    }
   }
 
 

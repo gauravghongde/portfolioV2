@@ -1,10 +1,27 @@
 export interface Social { label: string; url: string };
 export interface Skill { label: string; entries: any };
 export interface NavItem { label: string; url: any };
-export interface ProjectLink { code: string; preview: string }
+export interface ProjectLink { code: string; preview: string };
+export enum ColorKind { Primary="primary-color", Secondary="secondary-color", Accent="accent-color" }
+export interface ThemeColor { label: ColorKind; value: string };
 export interface Project { title: string; description: string; features: string[]; techStack: string[]; link: ProjectLink };
 
+export const DEFAULT_PRIMARY_COLOR = "#000000";
+export const DEFAULT_ACCENT_COLOR = "#dfdfdf";
+export const DEFAULT_SECONDARY_COLOR = DEFAULT_ACCENT_COLOR+66;
+
+export const NAME = "Gaurav Ghongde";
+export const BIO = "I'm a Computer Engineering Graduate, currently working as a Software Developer";
+export const CURRENT_ORG = "TIAA";
+
+export const MOBILE_NUMBER = '(+91) 7776972574';
+export const EMAIL_ID = '7gaurav.ghongde@gmail.com';
+
 export const NAV_ITEMS: NavItem[] = [
+  {
+    label: "Home",
+    url: "/"
+  },
   {
     label: "Projects",
     url: "/projects"
@@ -21,17 +38,20 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Contact",
     url: "/contact"
   },
-  {
-    label: "Feedback",
-    url: "/feedback"
-  },
-]
+];
+
+export const THEME_COLORS: string[] = [
+  "#003915",
+  "#2345aa",
+  "#530d07",
+  "#074b53"
+];
 
 export const resumeSourcePDF = "https://gauravghongde.github.io/resume/resume.pdf";
+export const resumeDownloadPDF = "https://github.com/gauravghongde/resume/raw/main/resume.pdf";
 
 export const fileConfig = "_white.svg";
 export const socialLinkBaseURL = "https://raw.githubusercontent.com/gauravghongde/social-icons/master/SVG/White/";
-
 export const socialSites = [
   {
     label: "Folio",
@@ -176,4 +196,7 @@ export const PROJECTS: Project[] = [
       preview: "https://play.google.com/store/apps/details?id=com.rstack.dephone"
     }
   },
-]
+];
+
+export const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeZAJANt-e-TDj-d8p5SUokl9Vb5zeoXKGBHOlkw-JRl2P6pw/formResponse'
+export const FB_TEXT_PARAM = 'entry.265712092'

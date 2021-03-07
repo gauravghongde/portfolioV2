@@ -7,6 +7,13 @@
 //   $accent-color: lighten($accent-color, 60%);
 // }
 
-$accent-color: #dfdfdf;
-$primary-color: #000000;
-$secondary-color: grey;
+//fallback
+// :root {
+//   --accent-color: #dfdfdf;
+//   --primary-color: #000000;
+//   --secondary-color: grey;
+// }
+
+$accent-color: var(--accent-color);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);

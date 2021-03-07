@@ -1,4 +1,7 @@
-@import '../../colors.scss';
+@import "../../colors.scss";
+
+$menu-container-p: 0.6rem;
+$menu-container-m: 1.6rem;
 
 a {
   text-decoration: none;
@@ -64,6 +67,13 @@ $menu-container-m: 1.6rem;
   }
 }
 
+.nav-menu-items {
+  font-size: 2em;
+  font-family: "Gilroy";
+  font-weight: 800;
+  margin-top: 1.5em;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -88,13 +98,6 @@ $menu-container-m: 1.6rem;
   }
 }
 
-.nav-menu-items {
-  font-size: 2em;
-  font-family: "Gilroy";
-  font-weight: 800;
-  margin-top: 1.5em;
-}
-
 .fade-text {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -116,4 +119,32 @@ $menu-container-m: 1.6rem;
   background: $accent-color;
   margin: 5px;
   position: relative;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.img-color-btn {
+  height: 0.8em;
+  margin-right: 1rem;
+
+  &:hover {
+    -webkit-animation: spin 0.5s linear infinite;
+    -moz-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite;
+  }
 }

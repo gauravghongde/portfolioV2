@@ -1,4 +1,8 @@
 @import "./colors.scss";
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('assets/fonts/CascadiaCode_VTT.ttf') format('truetype');
+}
 
 * {
   cursor: none !important;
@@ -91,7 +95,7 @@ html {
 .body-text {
   margin: 0 0 1.3rem 1.6rem;
   font-size: 4vh;
-  color: rgb(255 255 255 / 60%);
+  color: $secondary-color;
 }
 
 @media only screen and (max-width: 600px) {
@@ -113,7 +117,8 @@ html {
 // ------------ pdf-viewer -----------------//
 
 .ng2-pdf-viewer-container {
-  border-radius: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .page {

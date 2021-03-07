@@ -30,11 +30,11 @@
     </div>
     <div class="footer-nav">
       <div>
-        <button class="btn btn-hollow">visit</button>
-        <button class="btn btn-hollow"> <img class="btn-icon" src="assets/icons/git.svg"> </button>
+        <a href="{{currentProject.link.preview}}" class="btn btn-hollow">visit</a>
+        <a href="{{currentProject.link.code}}" class="btn btn-hollow"> <img class="btn-icon" src="assets/icons/git.svg"> </a>
       </div>
       <div class="bottom-btn">
-        <button class="btn">next ({{(currentIndex+2)%totalProjects}}/{{totalProjects}}) →</button>
+        <a href="/projects/{{this.nextProjectRouteId}}" class="btn">next ({{nextIndex+1}}/{{totalProjects}}) →</a>
       </div>
     </div>
   </div>
