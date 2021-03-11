@@ -1,8 +1,4 @@
-<div class="fill-wh" wheel (mouseWheelUp)="mouseWheelUpFunc($event)" (mouseWheelDown)="mouseWheelDownFunc($event)"
-  (touchScroll)="touchScrollFunc($event)">
-  <div class="gilroy navigator" [ngStyle]="{'transform': 'translateY(' + yPosition + 'vh) rotate(90deg)'}">
-    {{nextRoute.label}} 🠒
-  </div>
+<div class="fill-wh">
   <app-nav></app-nav>
   <router-outlet></router-outlet>
 </div>

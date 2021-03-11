@@ -1,10 +1,10 @@
 export interface Social { label: string; url: string };
 export interface Skill { label: string; entries: any };
 export interface NavItem { label: string; url: any };
-export interface ProjectLink { code: string; preview: string };
+export interface ProjectLink { code: string; visit: string };
 export enum ColorKind { Primary="primary-color", Secondary="secondary-color", Accent="accent-color" }
 export interface ThemeColor { label: ColorKind; value: string };
-export interface Project { title: string; description: string; features: string[]; techStack: string[]; link: ProjectLink };
+export interface Project { title: string; description: string; features: string[]; preview:string, techStack: string[]; link: ProjectLink };
 
 export const DEFAULT_PRIMARY_COLOR = "#000000";
 export const DEFAULT_ACCENT_COLOR = "#dfdfdf";
@@ -130,15 +130,17 @@ export const PROJECTS: Project[] = [
       "Custom Icons",
       "Custom Avatar"
     ],
+    preview: 'assets/videos/folio.mp4',
     techStack: [
       "Spring Boot",
       "Angular 10",
       "MongoDB",
       "Deployment: Heroku (backend), Vercel (frontend)"
     ],
+
     link: {
       code: "https://github.com/projectFolio",
-      preview: "https://myfolio.vercel.app"
+      visit: "https://myfolio.vercel.app",
     }
   },
   {
@@ -149,13 +151,14 @@ export const PROJECTS: Project[] = [
       "Configurable and Customizable",
       "Modern UI trend",
     ],
+    preview: 'assets/videos/portfolioWebsite.mp4',
     techStack: [
       "Angular 10",
       "Vercel for Deployment"
     ],
     link: {
       code: "https://github.com/gauravghongde/portfolioV2",
-      preview: "/"
+      visit: "/"
     }
   },
   {
@@ -166,6 +169,7 @@ export const PROJECTS: Project[] = [
       "Configurable and Customizable",
       "Modern UI trend",
     ],
+    preview: 'assets/videos/devnet.mp4',
     techStack: [
       "Spring Boot",
       "Angular 8",
@@ -174,7 +178,7 @@ export const PROJECTS: Project[] = [
     ],
     link: {
       code: "https://github.com/gauravghongde/devnet",
-      preview: "https://opendevnet.vercel.app"
+      visit: "https://opendevnet.vercel.app"
     }
   },
   {
@@ -186,6 +190,7 @@ export const PROJECTS: Project[] = [
       "Daily and Weekly Usage",
       "Alerts and Notifications"
     ],
+    preview: 'assets/videos/PortfolioV2.webm',
     techStack: [
       "Android",
       "Java",
@@ -193,7 +198,7 @@ export const PROJECTS: Project[] = [
     ],
     link: {
       code: "https://github.com/gauravghongde/Minify",
-      preview: "https://play.google.com/store/apps/details?id=com.rstack.dephone"
+      visit: "https://play.google.com/store/apps/details?id=com.rstack.dephone"
     }
   },
 ];

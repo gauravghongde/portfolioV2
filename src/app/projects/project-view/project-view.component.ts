@@ -31,4 +31,12 @@ export class ProjectViewComponent implements OnInit {
     this.nextIndex = ((this.currentIndex + 1) % this.totalProjects);
     this.nextProjectRouteId = PROJECTS[this.nextIndex].title;
   }
+
+  public linkClicked(url: string, openInNewTab: boolean = false) {
+    if (openInNewTab) {
+      window.open(url,'_blank');
+    } else {
+      window.open(url);
+    }
+  }
 }

@@ -1,8 +1,8 @@
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
-import curDot from "cursor-dot-v2";
 import { Subscription } from 'rxjs';
+import { CommonService } from './common.service';
 import { ColorKind, DEFAULT_ACCENT_COLOR, DEFAULT_PRIMARY_COLOR, DEFAULT_SECONDARY_COLOR, NavItem, NAV_ITEMS, ThemeColor, THEME_COLORS } from './config';
 @Component({
   selector: 'app-root',
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   public subscriptions: Subscription[] = [];
 
 
-  constructor(private router: Router, private meta: Meta) { }
+  constructor(private router: Router, private meta: Meta, private commonService: CommonService) { }
 
   public ngOnDestroy(): void {
     this.subscriptions.map(sub => sub && sub.unsubscribe());
@@ -38,15 +38,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
     });
     this.subscriptions.push(route$);
-
-    setTimeout(() => this.applyCursor(), 1000);
+    this.commonService.setCursor();
   }
 
   private updateColors() {
-    if(sessionStorage.getItem(ColorKind.Primary) == null) {
-      sessionStorage.setItem(ColorKind.Primary, DEFAULT_PRIMARY_COLOR);
+    if(localStorage.getItem(ColorKind.Primary) == null) {
+      localStorage.setItem(ColorKind.Primary, DEFAULT_PRIMARY_COLOR);
     }
-    this.primaryColor = sessionStorage.getItem(ColorKind.Primary);
+    this.primaryColor = localStorage.getItem(ColorKind.Primary);
     const themeColors = new Map([
       [ColorKind.Primary, this.primaryColor],
       [ColorKind.Accent, this.accentColor],
@@ -87,56 +86,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
       this.counter = 0;
       this.yPosition = 106;
     }, 1000);
-  }
-
-  applyCursor() {
-    console.log("Am I too early");
-    const cursor = curDot({
-      zIndex: 100,
-      diameter: 30,
-      easing: 4
-    });
-
-    cursor.over(".title", {
-      scale: 5,
-      background: "#fff"
-    });
-
-    cursor.over(".cursor-btn", {
-      scale: 0.5,
-      background: "#fff",
-      borderColor: "transparent"
-    });
-
-    cursor.over(".social-icon-container", {
-      scale: 1,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
-    cursor.over(".text-content", {
-      scale: 5,
-      background: "#fff"
-    });
-
-    cursor.over(".cursor-link", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
-    cursor.over("a", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
-    cursor.over(".btn", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
   }
 
   ngAfterViewChecked() {

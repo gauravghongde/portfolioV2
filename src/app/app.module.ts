@@ -15,13 +15,10 @@ import { ProjectViewComponent } from './projects/project-view/project-view.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
-import { WheelDirective } from './utilities/wheel.directive';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    WheelDirective,
     HomepageComponent,
     NavComponent,
     LandingPageComponent,
@@ -30,7 +27,7 @@ import { WheelDirective } from './utilities/wheel.directive';
     SkillsComponent,
     ProjectsComponent,
     ResumeComponent,
-    ProjectViewComponent
+    ProjectViewComponent,
   ],
   imports: [
     BrowserModule,

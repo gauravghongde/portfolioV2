@@ -34,11 +34,8 @@
 }
 
 .proj-media {
-  background-color: $secondary-color;
-  border-radius: 2rem;
-  padding: 2rem;
-  width: 32rem;
-  height: 10rem;
+  border-radius: 0.5rem;
+  height: 40vh;
   margin-top: 2rem;
 }
 
@@ -57,12 +54,12 @@
 .proj-ft {
   @extend .proj-tech;
   margin-left: 0;
-  margin-bottom: 2rem;
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -84,6 +81,11 @@
 
   .proj-desc {
     font-size: 2vh;
+  }
+
+  .proj-media {
+    height: unset;
+    width: 100%;
   }
 
   .proj-tech,

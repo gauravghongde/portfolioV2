@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
       feedbackText: new FormControl(null, [Validators.required]),
       rating: new FormControl()
     });
-    if (sessionStorage.getItem('isFBSubmitted') === 'true') {
+    if (localStorage.getItem('isFBSubmitted') === 'true') {
       this.submitted = true;
     }
   }
@@ -37,13 +37,13 @@ export class ContactComponent implements OnInit {
       this.commonService.postMethodWithOptions(FORM_URL, fbBody, { responseType: 'text/html' }).subscribe(
         (resp: any) => {
           this.submitted = true;
-          sessionStorage.setItem('isFBSubmitted', 'true');
+          localStorage.setItem('isFBSubmitted', 'true');
           this.loading = false;
           console.log("resp", resp);
         },
         (err: any) => {
           this.submitted = true;
-          sessionStorage.setItem('isFBSubmitted', 'true');
+          localStorage.setItem('isFBSubmitted', 'true');
           this.loading = false;
           console.log("err", err);
         }
