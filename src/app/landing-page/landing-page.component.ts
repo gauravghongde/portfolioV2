@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import curDot from "cursor-dot-v2";
 
 @Component({
   selector: 'app-landing-page',
@@ -10,6 +9,11 @@ export class LandingPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // this.yPosition.subscribe(x => {
+    //   console.log('firstname value changed')
+    //   console.log(x)
+    // })
+  }
 
 }

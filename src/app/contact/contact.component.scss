@@ -1,0 +1,74 @@
+@import "src/colors.scss";
+
+.contact-container {
+  margin: 0.6rem 1.6rem 0.6rem 1.6rem;
+}
+
+.body-text {
+  margin: 0;
+  font-size: 5vmax;
+}
+
+.header-text {
+  font-weight: 800;
+  color: $accent-color;
+  font-size: xx-large;
+}
+
+.text-link {
+  color: $secondary-color;
+}
+
+.text-link:hover {
+  color: $accent-color;
+  transition: ease 0.5s;
+}
+
+.pull-right {
+  float: right;
+}
+
+.feedback-resp {
+  color: $accent-color;
+  font-size: xx-large;
+}
+
+.textarea {
+  border: none;
+  outline: none;
+  resize: vertical;
+  background-color: $secondary-color;
+  border-radius: 0.5rem;
+  width: calc(100% - 2rem);
+  font-size: medium;
+  color: $accent-color;
+  padding: 1rem;
+  margin: 1.6rem 0 0 0;
+  &::placeholder {
+    color: $accent-color;
+  }
+}
+
+.btn {
+  margin: 1.6rem 0 1.6rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .contact-container {
+    margin: 0 6vw 3vw 6vw;
+  }
+
+  .body-text {
+    font-size: 6vmin;
+  }
+
+  .header-text {
+    font-size: medium;
+  }
+
+  .textarea {
+    font-size: small;
+    width: calc(100% - (2rem+6vw))
+  }
+}

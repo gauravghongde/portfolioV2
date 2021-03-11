@@ -1,66 +1,91 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
-import curDot from "cursor-dot-v2";
-
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { CommonService } from './common.service';
+import { ColorKind, DEFAULT_ACCENT_COLOR, DEFAULT_PRIMARY_COLOR, DEFAULT_SECONDARY_COLOR, NavItem, NAV_ITEMS, ThemeColor, THEME_COLORS } from './config';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewChecked {
-  title = 'portfolioV2';
+  public title = 'portfolioV2';
+  public counter = 0;
+  public yPosition = 106;
+  public currentIndex = 0;
+  public nextIndex = 0;
+  public nextRoute: NavItem = NAV_ITEMS[0];
+  public primaryColor: string = DEFAULT_PRIMARY_COLOR;
+  public accentColor: string = DEFAULT_ACCENT_COLOR;
+  public subscriptions: Subscription[] = [];
 
-  ngOnInit(): void {
-    setTimeout(()=> this.applyCursor(), 1000);
+
+  constructor(private router: Router, private meta: Meta, private commonService: CommonService) { }
+
+  public ngOnDestroy(): void {
+    this.subscriptions.map(sub => sub && sub.unsubscribe());
   }
 
-  applyCursor() {
-    console.log("Am I too early");
-    const cursor = curDot({
-      zIndex: 100,
-      diameter: 30,
-      easing: 4
+  ngOnInit(): void {
+    this.updateColors();
+    const route$ = this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        console.log("Router: ", e.url);
+        this.currentIndex = NAV_ITEMS.findIndex(navItem => e.url === navItem.url);
+        this.nextIndex = (this.currentIndex + 1) % NAV_ITEMS.length;
+        this.nextRoute = NAV_ITEMS[this.nextIndex];
+      }
     });
+    this.subscriptions.push(route$);
+    this.commonService.setCursor();
+  }
 
-    cursor.over(".title", {
-      scale: 5,
-      background: "#fff"
+  private updateColors() {
+    if(localStorage.getItem(ColorKind.Primary) == null) {
+      localStorage.setItem(ColorKind.Primary, DEFAULT_PRIMARY_COLOR);
+    }
+    this.primaryColor = localStorage.getItem(ColorKind.Primary);
+    const themeColors = new Map([
+      [ColorKind.Primary, this.primaryColor],
+      [ColorKind.Accent, this.accentColor],
+      [ColorKind.Secondary, this.accentColor+66],
+    ]);
+
+    Array.from(themeColors.entries()).forEach(([label, value]) => {
+      document.body.style.setProperty(`--${label}`, value);
+      if (label == ColorKind.Primary) {
+        this.meta.updateTag({ name: 'theme-color', content: value });
+      }
     });
+  }
 
-    cursor.over(".cursor-btn", {
-      scale: 0.5,
-      background: "#fff",
-      borderColor: "transparent"
-    });
+  public mouseWheelUpFunc(event: any) {
+    // console.log(event.wheelDelta);
+  }
 
-    cursor.over(".social-icon-container", {
-      scale: 1,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
+  public mouseWheelDownFunc(event: any) {
+    // console.log(event.wheelDelta);
+    this.navigator(event.wheelDelta);
+  }
 
-    cursor.over(".text-content", {
-      scale: 5,
-      background: "#fff"
-    });
+  public touchScrollFunc(event: any) {
+    console.log(event.touches[0].clientY);
+    // this.navigator(event.touches[0].clientY);
+  }
 
-    cursor.over(".cursor-link", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
-    cursor.over("a", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
-    cursor.over(".btn", {
-      scale: 2.5,
-      background: "#faa2c1",
-      borderColor: "transparent"
-    });
-
+  private navigator(yPos: number) {
+    this.counter = this.counter + 1;
+    if (this.counter > 10) {
+      clearTimeout(timer);
+      window.location.href = this.nextRoute.url;
+    }
+    console.log(this.counter);
+    this.yPosition = this.yPosition + yPos / 50;
+    var timer = setTimeout(() => {
+      this.counter = 0;
+      this.yPosition = 106;
+    }, 1000);
   }
 
   ngAfterViewChecked() {

@@ -4,8 +4,12 @@
     My Resume
   </h1>
 
-  <div class="resume-container scrollable">
+  <div class="resume-container">
+    <div class="btn-array">
+      <a href="{{resumeDDL}}" class="btn" download="Resume_GauravGhongde">download</a>
+      <a href="mailto:?subject=Resume - Gaurav Ghongde&body=Hi, I found this resume and thought you might like it {{resumeDDL}}"
+        class="btn btn-hollow">share via email</a>
+    </div>
     <pdf-viewer [src]="pdfSource" [original-size]="false"></pdf-viewer>
-    <!-- <iframe src="https://drive.google.com/file/d/1uFn1jM9gCRgxY_CeQeLnUJgdszuqLc3N/preview"></iframe> -->
   </div>
 </div>

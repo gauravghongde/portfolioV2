@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import "src/colors.scss";
 
 @media only screen and (max-width: 600px) {
   .profile-pic-bg {
@@ -36,7 +36,7 @@
 .secondary-text {
   margin: 0 0 1.5vw 3vw;
   font-size: 6vh;
-  color: rgb(255 255 255 / 70%)
+  color: $secondary-color;
 }
 
 .social-icon-container {
@@ -48,6 +48,28 @@
   padding: 0 0.5rem 0 0;
   height: 2rem;
 }
+
+.bg-profile {
+  height: 100%;
+  position: relative;
+}
+
+.bg-profile::before {
+  content: "";
+  opacity: 0.5;
+  background-image: url(/assets/images/profile-pic.svg);
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 107vmin;
+  background-position: bottom -7rem right -11rem;
+  z-index: -1;
+}
+
 
 @media only screen and (max-width: 600px) {
   .display-text {
@@ -64,8 +86,8 @@
     margin: 0 0 6vw 6vw;
   }
 
+  .bg-profile::before {
+    background-size: 87vh;
+    background-position: bottom -1rem right -13rem;
+  }
 }
-
-
-
-/* Utility classes */

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project, PROJECTS } from 'src/app/config';
 
 @Component({
@@ -11,8 +11,10 @@ export class ProjectViewComponent implements OnInit {
 
   public projectTitle: string;
   public currentIndex: number;
+  public nextIndex: number;
   public totalProjects: number = PROJECTS.length;
   public currentProject: Project;
+  public nextProjectRouteId: string;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -25,6 +27,16 @@ export class ProjectViewComponent implements OnInit {
     this.currentIndex = PROJECTS.findIndex(project => this.projectTitle === project.title);
     this.currentProject = PROJECTS[this.currentIndex];
     console.log(this.currentIndex, this.currentProject);
+
+    this.nextIndex = ((this.currentIndex + 1) % this.totalProjects);
+    this.nextProjectRouteId = PROJECTS[this.nextIndex].title;
   }
 
+  public linkClicked(url: string, openInNewTab: boolean = false) {
+    if (openInNewTab) {
+      window.open(url,'_blank');
+    } else {
+      window.open(url);
+    }
+  }
 }

@@ -1,17 +1,19 @@
-<div class="welcome-text-container">
-  <p class="display-text gilroy">
-    <span class="text-content">Hi,</span>
-    <br />
-    <span class="text-content">I'm Gaurav Ghongde</span>
-  </p>
-  <p class="secondary-text cascadia">I'm a Computer Engineering Graduate, currently working as a Software Developer
-    <a class="deco-none cursor-btn" href="https://tiaa.org">@TIAA</a>
-  </p>
-  <div class="cascadia social-icon-container">
-    <span *ngFor="let socialSite of socialSites">
-      <a href="{{socialSite.url}}" target="_blank">
-        <img class="social-icon" src="{{baseUrl}}{{socialSite.label}}{{fileConfig}}" />
-      </a>
-    </span>
+<div class="bg-profile">
+  <div class="welcome-text-container">
+    <p class="display-text gilroy">
+      <span class="text-content">Hi,</span>
+      <br />
+      <span class="text-content">I'm {{name}}</span>
+    </p>
+    <p class="secondary-text cascadia">{{bio}}
+      <a class="deco-none cursor-btn" href="https://tiaa.org">@{{currentOrg}}</a>
+    </p>
+    <div class="cascadia social-icon-container">
+      <span *ngFor="let socialSite of socialSites">
+        <a href="{{socialSite.url}}" target="_blank">
+          <img class="social-icon" src="{{baseUrl}}{{socialSite.label}}{{fileConfig}}" />
+        </a>
+      </span>
+    </div>
   </div>
 </div>

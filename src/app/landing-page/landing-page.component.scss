@@ -9,6 +9,10 @@
   height: 100%;
 }
 
+.fit-height {
+  height: fit-content;
+}
+
 .bg-art-filter {
   width: 21%;
   opacity: 0.3;
@@ -28,7 +32,7 @@
   top: 0;
   height: 90%;
   transform: scale(1.5);
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: -1;
 }
 
