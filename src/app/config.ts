@@ -2,13 +2,13 @@ export interface Social { label: string; url: string };
 export interface Skill { label: string; entries: any };
 export interface NavItem { label: string; url: any };
 export interface ProjectLink { code: string; visit: string };
-export enum ColorKind { Primary="primary-color", Secondary="secondary-color", Accent="accent-color" }
+export enum ColorKind { Primary = "primary-color", Secondary = "secondary-color", Accent = "accent-color" }
 export interface ThemeColor { label: ColorKind; value: string };
-export interface Project { title: string; description: string; features: string[]; preview:string, techStack: string[]; link: ProjectLink };
+export interface Project { title: string; description: string; features: string[]; preview: string, techStack: string[]; link: ProjectLink };
 
 export const DEFAULT_PRIMARY_COLOR = "#000000";
 export const DEFAULT_ACCENT_COLOR = "#dfdfdf";
-export const DEFAULT_SECONDARY_COLOR = DEFAULT_ACCENT_COLOR+66;
+export const DEFAULT_SECONDARY_COLOR = DEFAULT_ACCENT_COLOR + 66;
 
 export const NAME = "Gaurav Ghongde";
 export const BIO = "I'm a Computer Engineering Graduate, currently working as a Software Developer";
@@ -41,6 +41,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const THEME_COLORS: string[] = [
+  "#000000",
   "#003915",
   "#2345aa",
   "#530d07",
@@ -73,26 +74,6 @@ export const socialSites = [
     label: "Gmail",
     url: "mailto:7gaurav.ghongde@gmail.com"
   },
-  // {
-  //   label: "Instagram",
-  //   url: "https://www.instagram.com/madebygaurav"
-  // },
-  // {
-  //   label: "Behance",
-  //   url: "https://www.behance.net/gauravghongde"
-  // },
-  // {
-  //   label: "Telegram",
-  //   url: "https://telegram.me/gsg7397"
-  // },
-  // {
-  //   label: "Discord",
-  //   url: "https://discord.gg/2RHSUwy"
-  // },
-  // {
-  //   label: "GooglePlay",
-  //   url: "https://play.google.com/store/apps/dev?id=7300960281868524728"
-  // },
 ];
 
 export const skills = [

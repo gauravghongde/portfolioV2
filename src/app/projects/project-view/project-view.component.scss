@@ -9,6 +9,7 @@
 .head-container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 7rem;
 }
 
 .proj-index {
@@ -59,11 +60,19 @@
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding-top: 2rem;
+  position: absolute;
+  width: calc(100% - 3.2rem);
+  padding-bottom: 1rem;
+  bottom: 0;
+  background: linear-gradient(0deg, $primary-color, $primary-color, $primary-color, $primary-color, #00000000);
 }
 
 @media only screen and (max-width: 600px) {
+  .head-container {
+    margin-bottom: 10rem;
+  }
+
   .proj-index {
     transform: translate(-56px, 0);
     font-size: 15vh;
@@ -95,6 +104,10 @@
     p {
       font-size: 2vh;
     }
+  }
+
+  .footer-nav {
+    padding-top: 0.8rem;
   }
 
   .bottom-btn {

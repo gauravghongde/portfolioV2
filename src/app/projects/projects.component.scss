@@ -1,5 +1,8 @@
+@import "../../colors.scss";
 
-@import '../../colors.scss';
+.scrollable-y {
+  overflow-x: hidden;
+}
 
 .display-text {
   font-weight: 100;
@@ -12,7 +15,6 @@
 .menu-list-item {
   margin-bottom: 2rem;
 }
-
 
 @media only screen and (max-width: 600px) {
   .display-text {

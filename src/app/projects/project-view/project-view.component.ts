@@ -16,27 +16,26 @@ export class ProjectViewComponent implements OnInit {
   public currentProject: Project;
   public nextProjectRouteId: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(param => {
       this.projectTitle = param.pId;
+      this.currentIndex = PROJECTS.findIndex(project => this.projectTitle === project.title);
+      this.currentProject = PROJECTS[this.currentIndex];
+      console.log(this.currentIndex, this.currentProject);
+
+      this.nextIndex = ((this.currentIndex + 1) % this.totalProjects);
+      this.nextProjectRouteId = PROJECTS[this.nextIndex].title;
       console.log(this.projectTitle);
     });
-
-    this.currentIndex = PROJECTS.findIndex(project => this.projectTitle === project.title);
-    this.currentProject = PROJECTS[this.currentIndex];
-    console.log(this.currentIndex, this.currentProject);
-
-    this.nextIndex = ((this.currentIndex + 1) % this.totalProjects);
-    this.nextProjectRouteId = PROJECTS[this.nextIndex].title;
   }
 
   public linkClicked(url: string, openInNewTab: boolean = false) {
     if (openInNewTab) {
-      window.open(url,'_blank');
-    } else {
       window.open(url);
+    } else {
+      this.router.navigate(['/' + url]);
     }
   }
 }
