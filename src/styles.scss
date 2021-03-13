@@ -1,7 +1,7 @@
 @import "./colors.scss";
 @font-face {
-  font-family: 'Cascadia Code';
-  src: url('assets/fonts/CascadiaCode_VTT.ttf') format('truetype');
+  font-family: "Cascadia Code";
+  src: url("assets/fonts/CascadiaCode_VTT.ttf") format("truetype");
 }
 
 * {
@@ -13,12 +13,8 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -61,10 +57,6 @@ body {
 .fill-wh {
   width: 100%;
   height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .text-primary-100 {
@@ -146,4 +138,26 @@ html {
 .btn-icon {
   height: 2.8vh;
   margin-bottom: -0.2rem;
+}
+
+//Custom Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 2em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent-color;
 }
