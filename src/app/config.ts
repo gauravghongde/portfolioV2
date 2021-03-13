@@ -126,14 +126,17 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "PersonalWebsite",
-    description: "A cool-looking UI/UX focused personal website. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium ex delectus consectetur nam voluptatum reprehenderit, illum hic doloribus facere perferendis voluptatibus pariatur nemo illo similique unde aliquam error quod mollitia?",
+    description: "A cool-looking UI/UX focused personal website. Web Developer Interactive Portfolio made using Angular, HTML, SCSS. Completely configurable for any user. Website showcases Intro, Skills, Resume, Projects and Contact Details.",
     features: [
-      "Responsive Design",
+      "Responsive Design (Desktop & Mobile)",
       "Configurable and Customizable",
       "Modern UI trend",
+      "Custom Cursor"
     ],
     preview: 'assets/videos/portfolioWebsite.mp4',
     techStack: [
+      "HTML",
+      "SCSS",
       "Angular 10",
       "Vercel for Deployment"
     ],
