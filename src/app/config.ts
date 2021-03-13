@@ -174,7 +174,7 @@ export const PROJECTS: Project[] = [
       "Daily and Weekly Usage",
       "Alerts and Notifications"
     ],
-    preview: 'assets/videos/PortfolioV2.webm',
+    preview: 'assets/videos/minify.mp4',
     techStack: [
       "Android",
       "Java",
