@@ -6,7 +6,9 @@
       <span class="text-content">I'm {{name}}</span>
     </p>
     <p class="secondary-text cascadia">{{bio}}
-      <a class="deco-none cursor-btn" href="https://tiaa.org">@{{currentOrg}}</a>
+      <a class="deco-none cursor-btn" target="_blank" href="{{currentOrgURL}}">
+        @{{currentOrg}}
+      </a>
     </p>
     <div class="cascadia social-icon-container">
       <span *ngFor="let socialSite of socialSites">

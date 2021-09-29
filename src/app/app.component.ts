@@ -10,7 +10,7 @@ import { ColorKind, DEFAULT_ACCENT_COLOR, DEFAULT_PRIMARY_COLOR, DEFAULT_SECONDA
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewChecked {
-  public title = 'portfolioV2';
+  public title = 'portfolio';
   public counter = 0;
   public yPosition = 106;
   public currentIndex = 0;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BIO, CURRENT_ORG, fileConfig, NAME, Social, socialLinkBaseURL, socialSites } from '../config';
+import { BIO, CURRENT_ORG, CURRENT_ORG_URL, fileConfig, NAME, Social, socialLinkBaseURL, socialSites } from '../config';
 
 @Component({
   selector: 'app-homepage',
@@ -16,6 +16,7 @@ export class HomepageComponent implements OnInit {
   public name: string = NAME;
   public bio: string = BIO;
   public currentOrg: string = CURRENT_ORG;
+  public currentOrgURL: string = CURRENT_ORG_URL;
 
   constructor() { }
 
