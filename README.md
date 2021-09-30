@@ -1,6 +1,9 @@
-# PortfolioV2
+# Portfolio [https://madebygaurav.vercel.app]
+## Preview:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
+![Output sample](https://raw.githubusercontent.com/gist/gauravghongde/b9720e462e20b620776dca803c9420ae/raw/7e24553ac9e02c0ce6bb82f7f88f76bb61516ba6/portfolioWebsite.gif)
+
+## Head over to [config.ts](/src/app/config.ts) for configuration options!
 
 ## Development server
 
