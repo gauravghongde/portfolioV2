@@ -11,9 +11,9 @@ export const DEFAULT_ACCENT_COLOR = "#dfdfdf";
 export const DEFAULT_SECONDARY_COLOR = DEFAULT_ACCENT_COLOR + 66;
 
 export const NAME = "Gaurav Ghongde";
-export const BIO = "I'm a Computer Engineering Graduate, currently working as a Sr. Associate, Software Developer";
-export const CURRENT_ORG = "MorganStanley";
-export const CURRENT_ORG_URL = "https://www.morganstanley.com"
+export const BIO = "I'm a Computer Engineering Graduate, currently working as a Software Development Engineer II";
+export const CURRENT_ORG = "Flipkart";
+export const CURRENT_ORG_URL = "https://corporate.flipkart.net/corporate-home"
 
 export const MOBILE_NUMBER = '(+91) 7776972574';
 export const EMAIL_ID = '7gaurav.ghongde@gmail.com';
